@@ -11,5 +11,5 @@ function convertDate($day, $month)
     else return 'Incorrect date.';
 }
 
-echo convertdate(01, 07);
+echo convertDate(01, 07);
 ?>
