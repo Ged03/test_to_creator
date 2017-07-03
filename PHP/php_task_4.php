@@ -12,11 +12,18 @@
 
 
 <?php
-$dir    = 'images';
+$dir    = 'images/';
+if ($_FILES)
+{
+    $name = $_FILES['filename']['name'];
+    move_uploaded_file($_FILES['filename']['tmp_name'], $dir.$name);
+    echo 'Файл успешно загружен. <br>';
+}
 //Получение названий всех файлов указанной директории
 $files = scandir($dir);
-
-
-print_r($files);
-echo '<br>'.mime_content_type('images/'.$files[2]);
+foreach($files as $file)
+{
+   if(mime_content_type($dir.$file)=='image/jpeg')
+        echo '<img src='.$dir.$file.'>';
+}
 ?>
