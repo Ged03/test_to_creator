@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Gallery</title>
+        <link rel="stylesheet" type="text/css" href="css/style4.css">
     </head>
     <body>
         <form method="post" action="php_task_4.php" enctype="multipart/form-data">
@@ -13,6 +14,7 @@
 
 <?php
 $dir    = 'images/';
+if (!file_exists($dir)) mkdir($dir);
 if ($_FILES)
 {
     $name = $_FILES['filename']['name'];
