@@ -1,7 +1,47 @@
-.content{
-    width: 30%;
-    float: left;
+/* --------------- /базовые настройки ---------*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
 }
+
+img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+
 img{
 	max-width:100%;
+}
+/* --------------- /базовые настройки ---------*/
+
+.catalog{
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+}
+
+.catalog li {
+	display: inline-block;
+	width: 25%;    
+	min-width: 200px;
+	text-align: center;
+    padding: 2px;
+}
+
+.catalog li img{
+    max-height: 350px;
+}
+.catalog li:nth-child(3n){
+    float: right;
+}
+.catalog li:nth-child(3n-2){
+    float: left;
 }
