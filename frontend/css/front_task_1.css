@@ -26,14 +26,17 @@ img{
     max-width: 1280px;
     margin: auto;
     text-align: center;
+    padding: 10px;
 }
 
 .catalog li {
 	display: inline-block;
-	width: 25%;    
+	width: 31%;    
 	min-width: 200px;
 	text-align: center;
-    padding: 2px;
+    padding: 5px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
 }
 
 .catalog li img{
@@ -44,4 +47,30 @@ img{
 }
 .catalog li:nth-child(3n-2){
     float: left;
+}
+
+@media screen and (max-width:1024px){
+    
+    .catalog li{
+        width: 45%;
+    }
+    
+    .catalog li:nth-child(odd){
+        float: left;
+    }
+    .catalog li:nth-child(even){
+        float: right;
+    }
+}
+
+@media screen and (max-width:768px){
+    .catalog li{
+        width: 90%;
+    }
+    .catalog li:nth-child(odd){        
+        float: none;
+    }
+    .catalog li:nth-child(even){
+        float: none;
+    }
 }
