@@ -9,10 +9,4 @@ if (isset($_GET['curCount']))
     $response=[$product, $product, $product];
     echo json_encode($response);
 }
-function sanitizeString($var)
-{
-    $var = strip_tags($var);
-    $var = htmlentities($var);
-    return stripslashes($var);
-}
 ?>
