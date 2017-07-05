@@ -22,14 +22,14 @@ img{
 }
 /* --------------- /базовые настройки ---------*/
 
-.catalog{
+.tile, .list{
     max-width: 1280px;
     margin: auto;
     text-align: center;
     padding: 10px;
 }
 
-.catalog li {
+.tile li {
 	display: inline-block;
 	width: 31%;    
 	min-width: 200px;
@@ -39,38 +39,55 @@ img{
     border: 1px solid #ccc;
 }
 
-.catalog li img{
+.tile li img{
     max-height: 350px;
 }
-.catalog li:nth-child(3n){
+
+.list li img{
+    max-height: 250px;
+    float: left;
+    margin: 10px;
+}
+
+.tile li:nth-child(3n){
     float: right;
 }
-.catalog li:nth-child(3n-2){
+.tile li:nth-child(3n-2){
     float: left;
+}
+
+.list li{
+    display: inline-block;
+	width: 95%;    
+	min-width: 200px;
+	text-align: left;
+    padding: 5px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
 }
 
 @media screen and (max-width:1024px){
     
-    .catalog li{
+    .tile li{
         width: 46.5%;
     }
     
-    .catalog li:nth-child(odd){
+    .tile li:nth-child(odd){
         float: left;
     }
-    .catalog li:nth-child(even){
+    .tile li:nth-child(even){
         float: right;
     }
 }
 
 @media screen and (max-width:768px){
-    .catalog li{
+    .tile li{
         width: 95%;
     }
-    .catalog li:nth-child(odd){        
+    .tile li:nth-child(odd){        
         float: none;
     }
-    .catalog li:nth-child(even){
+    .tile li:nth-child(even){
         float: none;
     }
 }
