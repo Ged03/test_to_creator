@@ -9,21 +9,21 @@ function validate(form) {
 //Проверка ввода имени
 function validateName(field)
 {
-return (field == "") ? "Не введено имя. " : ""
+    return (field == "") ? "Не введено имя. " : ""
 }
 
 //Проверка ввода почты 
 function validateEmail(field) {
-if (field == "") return "Не введен адрес электронной почты. "
-else if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+)$/.test(field)))
-return "Электронный адрес имеет неверный формат. "
-return ""
+    if (field == "") return "Не введен адрес электронной почты. "
+    else if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([a-zA-Z\-0-9]+\.)+[a-zA-Z]+)$/.test(field)))
+    return "Электронный адрес имеет неверный формат. "
+    return ""
 }
 
 //Проверка ввода номера телефона
-function validateNumber(field) {
-if (field == "") return "Не введен номер телефона. "
-else if (!(/^((\+7|7|8)+([0-9]){10})$/.test(field)))
-return "Номер телефона имеет неверный формат. "
-return ""
+    function validateNumber(field) {
+    if (field == "") return "Не введен номер телефона. "
+    else if (!(/^((\+7|7|8)+([0-9]){10})$/.test(field)))
+    return "Номер телефона имеет неверный формат. "
+    return ""
 }
