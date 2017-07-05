@@ -11,3 +11,7 @@
     width: 95%;
     margin: 10px 0;
 }
+
+#errorText{
+    color: #f00;
+}

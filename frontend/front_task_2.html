@@ -8,13 +8,16 @@
 </head>
 <body>
     <div class="contact">
-         <label name="name">Имя</label>
-         <input type="text">
-         <label name="email">Email</label>
-         <input type="email" value="example@example.com">
-         <label name="number">Телефон</label>
-         <input type="tel">
-         <input type="submit" value="Отправить">
+        <form action="#" onSubmit="return validate(this)" method="post">
+             <label name="name">Имя</label>
+             <input type="text" name="name">
+             <label name="email">Email</label>
+             <input type="email" name="email" placeholder="example@example.com">
+             <label name="number">Телефон</label>
+             <input type="tel" name="number">
+             <input type="submit" value="Отправить"><br>
+             <span id='errorText'></span>             
+        </form>
     </div>
 </body>
 </html>
