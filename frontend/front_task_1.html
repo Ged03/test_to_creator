@@ -7,9 +7,9 @@
     <script type="text/javascript" src="js/front_task_1.js"></script>
 </head>
 <body>
-   <input type="button" onclick="swith()" value="Плитка/список">
     <div class="tile" id="catalog">
-       <ul>
+    <input type="button" onclick="swith()" value="Плитка/список">  
+       <ul id="product_list">
            <li>
                <div class="product">
                   <img src="images/Gretsch.jpg">
@@ -65,6 +65,8 @@
                </div>
            </li>
        </ul>
+       <input type="button" onclick="moreProducts()" value="Ещё+">
+       <span id="test"></span>
     </div>
 </body>
 </html>
