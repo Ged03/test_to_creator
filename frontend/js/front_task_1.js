@@ -15,6 +15,9 @@ function moreProducts(){
             {
                 if (this.responseText != null)
                 {
+                    var lastElem = product_list.lastChild
+                    if(lastElem.className == 'product_hidden')
+                        product_list.removeChild(lastElem)                    
                     var data = JSON.parse(this.responseText)
                     for(i=0; i<data.length; i++){
                         var newLi = document.createElement('li');
@@ -22,6 +25,12 @@ function moreProducts(){
                         data[i].img+'"><div class="descr">'+
                         '<h2>'+data[i].name+'</h2>'+
                         '<p>'+data[i].price+' p.</p></div></div>'
+                        product_list.appendChild(newLi)
+                    }
+                    if(product_list.children.length%3 == 2){
+                        var newLi = document.createElement('li');
+                        newLi.className = 'product_hidden'
+                        newLi.innerHTML = '<div></div>'
                         product_list.appendChild(newLi)
                     }
                 }

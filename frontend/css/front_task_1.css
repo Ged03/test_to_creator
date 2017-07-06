@@ -22,6 +22,10 @@ img{
 }
 /* --------------- /базовые настройки ---------*/
 
+.ul_container{        
+    overflow: hidden
+}
+
 .tile, .list{
     max-width: 1280px;
     margin: auto;
@@ -64,6 +68,10 @@ img{
     padding: 5px;
     margin: 10px 5px;
     border: 1px solid #ccc;
+}
+
+.product_hidden{
+    visibility: hidden;
 }
 
 @media screen and (max-width:1024px){
