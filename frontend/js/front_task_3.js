@@ -7,6 +7,7 @@ function setPlusIcon(){
             plus.innerHTML = '[+]'
             var first=allLi[i].firstChild;
             allLi[i].insertBefore(plus, first)
+            inUl[0].style.display = "none"
         }
     }
     var allA = document.getElementsByTagName('a')
@@ -15,6 +16,20 @@ function setPlusIcon(){
     }
 }
 
-function aClick(){
-    alert('qwe')
+function aClick(ev){
+    ev = ev || window.event
+    elem = ev.target
+    var exLi = elem.parentNode
+    var inUl = exLi.getElementsByTagName('ul')
+    if(inUl.length == 0) return true
+    if(inUl[0].style.display == "none"){
+        inUl[0].style.display = 'block'
+        var p = exLi.getElementsByTagName('span')
+        p[0].innerHTML = '[-]'
+    }else{
+        inUl[0].style.display = "none"
+        var p = exLi.getElementsByTagName('span')
+        p[0].innerHTML = '[+]'
+    }
+    ev.preventDefault()
 }
